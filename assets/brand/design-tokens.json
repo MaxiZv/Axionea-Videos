@@ -1,0 +1,165 @@
+{
+    "meta": {
+        "brand_name": "Axionea GbR",
+        "description": "Core design tokens for Axionea UI implementation. Always use these exact values — never hardcode colors or fonts manually.",
+        "version": "1.0.0"
+    },
+    "colors": {
+        "deep_navy": {
+            "value": "#000926",
+            "usage": "Primary background (dark mode), Headlines, Footer, Hero sections, CTAs dark background, Testimonials"
+        },
+        "sapphire": {
+            "value": "#0F52BA",
+            "hover": "#1A6AE8",
+            "usage": "Brand color — Buttons, Links, Badges, Logo, Eyebrow labels"
+        },
+        "amber": {
+            "value": "#E07B00",
+            "hover": "#F59E0B",
+            "usage": "CTA highlight, Icons — ONE warm accent only. Max 1× per section. Never use multiple amber elements in same view."
+        },
+        "ice_blue": {
+            "value": "#D6E6F3",
+            "usage": "Card backgrounds, Badges, Hover states"
+        },
+        "powder_blue": {
+            "value": "#A6C5D7",
+            "usage": "Subtexts on dark background, Borders"
+        },
+        "white": {
+            "value": "#FFFFFF",
+            "usage": "Primary background (main website, documents, standard content)"
+        },
+        "gray_50": {
+            "value": "#F9FAFB",
+            "usage": "Alternating sections between white content"
+        },
+        "gray_200": {
+            "value": "#E5E7EB",
+            "usage": "Borders, dividers"
+        },
+        "gray_600": {
+            "value": "#4B5563",
+            "usage": "Body text, secondary text"
+        }
+    },
+    "background_hierarchy": {
+        "note": "NO fully dark themes. KMU target group trusts light, clear interfaces.",
+        "light_content": "#FFFFFF",
+        "alternating_sections": "#F9FAFB",
+        "dark_moments": "#000926"
+    },
+    "typography": {
+        "display_headings": {
+            "family": "Syne",
+            "weights": [
+                700,
+                800
+            ],
+            "google_fonts_url": "https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        },
+        "body": {
+            "family": "DM Sans",
+            "weights": [
+                300,
+                400,
+                500
+            ]
+        },
+        "scale": {
+            "h1_display": {
+                "font": "Syne",
+                "weight": 800,
+                "size": "64px+",
+                "letter_spacing": "-3px",
+                "usage": "Hero Headlines"
+            },
+            "h2_section": {
+                "font": "Syne",
+                "weight": 700,
+                "size": "40px",
+                "letter_spacing": "-1.5px",
+                "usage": "Section Titles"
+            },
+            "h3_card": {
+                "font": "Syne",
+                "weight": 700,
+                "size": "28px",
+                "letter_spacing": "-0.5px",
+                "usage": "Card Headers"
+            },
+            "body": {
+                "font": "DM Sans",
+                "weight": 300,
+                "size": "16px",
+                "line_height": "1.7",
+                "usage": "Body text"
+            },
+            "small": {
+                "font": "DM Sans",
+                "weight": 400,
+                "size": "13px",
+                "usage": "Captions, Meta"
+            },
+            "eyebrow": {
+                "font": "Syne",
+                "weight": 700,
+                "size": "11px",
+                "letter_spacing": "3px",
+                "case": "UPPERCASE",
+                "color": "sapphire",
+                "usage": "Labels before H2 — always present before section headings"
+            },
+            "cta": {
+                "font": "Syne",
+                "weight": 700,
+                "size": "14px",
+                "letter_spacing": "0.5px",
+                "usage": "Button Text"
+            }
+        }
+    },
+    "ui": {
+        "border_radius_card": "20px",
+        "border_radius_default": "16px",
+        "border_card": "1px solid #E5E7EB",
+        "spacing_base_unit": "8px",
+        "spacing_scale": [
+            "8px",
+            "16px",
+            "24px",
+            "32px",
+            "48px",
+            "64px",
+            "96px"
+        ]
+    },
+    "effects": {
+        "card_hover": {
+            "transform": "translateY(-3px)",
+            "box_shadow": "0 8px 30px rgba(0,9,38,0.08)",
+            "transition": "transform 0.2s ease, box-shadow 0.2s ease"
+        },
+        "dark_section_glow": "radial-gradient(circle at top right, rgba(15,82,186,0.3), transparent 60%)"
+    },
+    "logo": {
+        "variants": {
+            "dark_outline": "On white/light background — PRIMARY",
+            "white_gray": "On dark background",
+            "blue_filled": "On sapphire background — selective use",
+            "red_filled": "Exception case only — NOT standard"
+        },
+        "rules": {
+            "clearspace": "Logo height × 0.5 on all sides",
+            "min_height": "20px",
+            "forbidden": [
+                "distort",
+                "rotate",
+                "overlay with gradients",
+                "reduce opacity"
+            ]
+        },
+        "files_location": "c:/Users/Maxi Zvada/Desktop/Axionea/Website/Logo/"
+    }
+}
