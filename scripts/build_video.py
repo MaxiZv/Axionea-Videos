@@ -25,29 +25,31 @@ CONFIG = {
         "music_start_scene": 2,
         # (Szene, Offset ab Szenenstart oder Wort, Effekt, Pegel dB)
         "cues": [
-            ("t", 0.0, "boom", -6), ("t", 0.5, "pulse", -8), ("t", 2.9, "click", -10),
-            ("t", 3.5, "click", -12), ("t", 4.1, "click", -12),
-            ("scene", 2, -0.25, "swoosh-soft", -10),
-            ("word", "Anfragen", 0.0, "ping", -12), ("word", "Dokumente", 0.0, "ping", -13),
-            ("word", "Angebote", 0.0, "ping", -13), ("word", "wertvolles", 0.4, "whoosh", -16),
-            ("scene", 3, -0.25, "swoosh-soft", -10), ("scene", 3, 1.0, "lock", -8),
-            ("scene", 4, -1.3, "riser", -16), ("scene", 4, 0.0, "dock", -8),
-            ("word", "Cloud,", 0.0, "whoosh", -12), ("word", "lokal,", 0.0, "dock", -10),
-            ("sent", 4, 2, 0.5, "tick", -10), ("sent", 4, 2, 0.9, "tick", -10),
-            ("sent", 4, 2, 1.3, "tick", -10), ("sent", 4, 2, 2.0, "hum", -12),
-            ("scene", 5, -0.25, "swoosh-soft", -10),
-            ("sent", 5, 0, 1.6, "pop", -10), ("sent", 5, 0, 2.2, "typing", -16),
-            ("sent", 5, 1, 0.0, "pop", -10), ("sent", 5, 2, 0.0, "pop", -10),
-            ("sent", 5, 3, 0.0, "pop", -10), ("sent", 5, 3, 2.0, "swoosh-soft", -10),
-            ("scene", 6, -0.25, "swoosh-soft", -10),
-            ("word", "Steuerkanzlei,", 0.0, "pop", -12), ("word", "Patentanwalt,", 0.0, "pop", -12),
-            ("word", "Ingenieurbüro", 0.0, "pop", -12), ("word", "Finanzmakler:", 0.0, "pop", -12),
-            ("word", "jede", 0.0, "whoosh", -12),
-            ("scene", 7, -0.25, "swoosh-soft", -10), ("word", "starten", 0.0, "tick", -10),
-            ("word", "messen", 0.0, "tick", -10), ("word", "bleiben", 0.0, "tick", -10),
-            ("word", "letzte", 0.0, "click", -8), ("word", "letzte", 0.15, "success", -10),
-            ("scene", 8, -1.2, "riser", -14), ("scene", 8, 0.55, "dock", -6),
-            ("scene", 8, 2.6, "chime", -10),
+            ("t", 0.0, "boom", -8), ("t", 0.5, "pulse", -10),
+            ("t", 2.9, "tick", -10), ("t", 3.5, "tick", -11), ("t", 4.1, "tick", -11),
+            ("scene", 2, 0.0, "swoosh-soft", -14),
+            ("word", "Anfragen", -0.1, "ping", -17), ("word", "Dokumente", -0.1, "ping", -18),
+            ("word", "Angebote", -0.1, "ping", -18), ("word", "wertvolles", 0.4, "whoosh", -18),
+            ("scene", 3, 0.0, "swoosh-soft", -14), ("scene", 3, 1.6, "dock", -12),
+            ("scene", 4, 0.0, "swoosh-soft", -14),
+            ("word", "Cloud,", 0.2, "whoosh", -15), ("word", "Cloud,", 1.35, "dock", -13),
+            ("word", "lokal,", -0.3, "dock", -15),
+            ("sent", 4, 2, 0.5, "tick", -13), ("sent", 4, 2, 0.9, "tick", -13),
+            ("sent", 4, 2, 1.3, "tick", -13), ("sent", 4, 2, 2.0, "hum", -15),
+            ("scene", 5, 0.0, "swoosh-soft", -14),
+            ("sent", 5, 0, 1.6, "pop", -15), ("sent", 5, 0, 2.3, "typing", -21),
+            ("sent", 5, 1, -0.1, "pop", -15), ("sent", 5, 2, -0.1, "pop", -15),
+            ("sent", 5, 3, -0.1, "pop", -15), ("sent", 5, 3, 0.5, "whoosh", -17),
+            ("sent", 5, 3, 2.0, "swoosh-soft", -14),
+            ("scene", 6, 0.0, "swoosh-soft", -14),
+            ("word", "Steuerkanzlei,", -0.15, "pop", -16), ("word", "Patentanwalt,", -0.15, "pop", -16),
+            ("word", "Ingenieurbüro", -0.15, "pop", -16), ("word", "Finanzmakler:", -0.15, "pop", -16),
+            ("word", "jede", -0.3, "whoosh", -15),
+            ("scene", 7, 0.0, "swoosh-soft", -14), ("word", "starten", -0.1, "tick", -13),
+            ("word", "messen", -0.1, "tick", -13), ("word", "bleiben", -0.1, "tick", -13),
+            ("word", "letzte", 0.0, "click", -10), ("word", "letzte", 0.12, "success", -13),
+            ("scene", 8, -0.3, "riser", -17), ("scene", 8, 0.95, "dock", -9),
+            ("scene", 8, 2.6, "chime", -12),
         ],
     },
     "02-axionea-core-kanzlei": {
@@ -59,22 +61,22 @@ CONFIG = {
         "dark_scenes": [1, 7],
         "music_start_scene": 2,
         "cues": [
-            ("t", 0.0, "boom", -8), ("t", 0.3, "pulse", -8), ("word", "Aber", 0.2, "whoosh", -12),
-            ("scene", 2, -0.25, "swoosh-soft", -10),
-            ("word", "Posteingang,", 0.0, "ping", -12), ("word", "Termine,", 0.0, "ping", -13),
-            ("word", "Mandantenanfragen,", 0.0, "ping", -13), ("word", "dieselben", 0.0, "tick", -12),
-            ("word", "keine", 0.0, "lock", -8),
-            ("scene", 3, -1.2, "riser", -16), ("scene", 3, 0.0, "dock", -8),
-            ("word", "Erstens:", 0.0, "dock", -8), ("word", "Zweitens:", 0.0, "dock", -8),
-            ("word", "Drittens:", 0.0, "dock", -8), ("word", "Viertens:", 0.0, "dock", -8),
-            ("word", "Fünftens:", 0.0, "dock", -8),
-            ("scene", 5, -0.25, "swoosh-soft", -10), ("word", "Erstentwurf,", -0.6, "typing", -16),
-            ("word", "gibt", 0.0, "click", -8), ("word", "gibt", 0.15, "success", -10),
-            ("scene", 6, -0.25, "swoosh-soft", -10), ("word", "Check,", 0.0, "tick", -10),
-            ("word", "setzen", 0.0, "tick", -10), ("word", "messen", 0.0, "tick", -10),
-            ("word", "Kanzleien", 0.0, "whoosh", -12),
-            ("scene", 7, -1.2, "riser", -14), ("word", "Axionea.", 0.0, "dock", -6),
-            ("word", "Axionea.", 1.6, "chime", -10),
+            ("t", 0.0, "boom", -9), ("t", 0.3, "pulse", -11), ("word", "Aber", 0.2, "whoosh", -16),
+            ("scene", 2, 0.0, "swoosh-soft", -14),
+            ("word", "Posteingang,", -0.15, "ping", -17), ("word", "Termine,", -0.15, "ping", -18),
+            ("word", "Mandantenanfragen,", -0.15, "ping", -18), ("word", "dieselben", 0.0, "tick", -15),
+            ("sent", 2, 1, 0.0, "whoosh", -17), ("word", "keine", -0.1, "lock", -11),
+            ("scene", 3, -1.0, "riser", -19), ("scene", 3, 0.3, "dock", -11),
+            ("word", "Erstens:", 0.05, "dock", -11), ("word", "Zweitens:", 0.05, "dock", -11),
+            ("word", "Drittens:", 0.05, "dock", -11), ("word", "Viertens:", 0.05, "dock", -11),
+            ("word", "Fünftens:", 0.05, "dock", -11),
+            ("scene", 5, 0.0, "swoosh-soft", -14), ("word", "Erstentwurf,", -0.6, "typing", -21),
+            ("word", "gibt", 0.0, "click", -10), ("word", "gibt", 0.12, "success", -13),
+            ("scene", 6, 0.0, "swoosh-soft", -14), ("word", "Check,", -0.1, "tick", -13),
+            ("word", "setzen", -0.1, "tick", -13), ("word", "messen", -0.1, "tick", -13),
+            ("word", "Kanzleien", -0.1, "whoosh", -16),
+            ("scene", 7, -0.8, "riser", -17), ("word", "Axionea.", 0.0, "dock", -9),
+            ("word", "Axionea.", 1.6, "chime", -12),
         ],
     },
 }
@@ -95,7 +97,8 @@ def caption_groups(words, keys):
         txt = " ".join(x["text"] for x in cur)
         end_sent = re.search(r"[.!?]$", w["text"]) is not None
         soft = re.search(r"[,:]$", w["text"]) is not None
-        if (nxt is None or end_sent or len(cur) >= 4 or len(txt) >= 24 or (soft and len(cur) >= 2)
+        nxt_len = len(txt) + 1 + len(nxt["text"]) if nxt else 0
+        if (nxt is None or end_sent or len(cur) >= 8 or nxt_len > 46 or (soft and len(cur) >= 4)
                 or (nxt and nxt["para"] != w["para"])):
             groups.append(cur)
             cur = []
@@ -103,7 +106,7 @@ def caption_groups(words, keys):
     for gi, g in enumerate(groups):
         start = g[0]["start"]
         nxt_start = groups[gi + 1][0]["start"] if gi + 1 < len(groups) else g[-1]["end"] + 0.6
-        end = min(nxt_start - 0.1, g[-1]["end"] + 0.6)
+        end = min(nxt_start - 0.08, g[-1]["end"] + 0.9)
         out.append({"start": round(start - 0.05, 3), "end": round(end, 3), "para": g[0]["para"],
                     "words": [{"t": x["text"], "s": x["start"],
                                "k": x["text"].strip(".,:;!?") in [k.strip(".,:;!?") for k in keys]} for x in g]})
