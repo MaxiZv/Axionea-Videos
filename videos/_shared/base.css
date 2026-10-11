@@ -1,0 +1,73 @@
+@font-face { font-family: "Syne"; font-weight: 700; src: url("syne-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Syne"; font-weight: 800; src: url("syne-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 400; src: url("dm-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 500; src: url("dm-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "DM Sans"; font-weight: 700; src: url("dm-sans-latin-700-normal.woff2") format("woff2"); }
+
+:root {
+  --navy: #000926;
+  --navy2: #0b1a45;
+  --sapphire: #0f52ba;
+  --sapphire-hi: #1a6ae8;
+  --amber: #e07b00;
+  --ice: #d6e6f3;
+  --powder: #a6c5d7;
+  --white: #ffffff;
+  --g50: #f9fafb;
+  --g200: #e5e7eb;
+  --g600: #4b5563;
+  --ok: #0f9f6e;
+}
+
+body { margin: 0; background: var(--g50); font-family: "DM Sans", sans-serif; color: var(--navy); }
+#root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--g50); }
+
+/* Hintergründe */
+.bg { position: absolute; inset: 0; }
+.bg-light { background: var(--g50); }
+.bg-light::after {
+  content: ""; position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(15, 82, 186, 0.10) 1.5px, transparent 1.5px);
+  background-size: 36px 36px;
+}
+.bg-navy { background: var(--navy); }
+.bg-navy::after {
+  content: ""; position: absolute; inset: 0;
+  background: radial-gradient(circle at 75% 20%, rgba(15, 82, 186, 0.35), transparent 60%);
+}
+
+.scene { position: absolute; inset: 0; overflow: hidden; }
+.stage { position: absolute; left: 0; right: 0; top: 0; height: 780px; display: flex; align-items: center; justify-content: center; }
+
+/* Typo */
+.eyebrow { font-family: "Syne", sans-serif; font-weight: 700; font-size: 22px; letter-spacing: 6px; text-transform: uppercase; color: var(--sapphire); }
+.on-navy .eyebrow { color: var(--powder); }
+.h1 { font-family: "Syne", sans-serif; font-weight: 800; font-size: 84px; letter-spacing: -3px; line-height: 1.02; margin: 0; }
+.h2 { font-family: "Syne", sans-serif; font-weight: 700; font-size: 52px; letter-spacing: -1.5px; line-height: 1.1; margin: 0; }
+.on-navy { color: var(--white); }
+
+/* Karten */
+.card { background: var(--white); border: 1px solid var(--g200); border-radius: 20px; box-shadow: 0 8px 30px rgba(0, 9, 38, 0.08); box-sizing: border-box; }
+.card-title { font-family: "Syne", sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.5px; }
+.muted { color: var(--g600); }
+.chip { display: inline-flex; align-items: center; gap: 10px; padding: 10px 18px; border-radius: 999px; background: var(--ice); color: var(--sapphire); font-weight: 700; font-size: 22px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: 16px 30px; border-radius: 14px; font-family: "Syne", sans-serif; font-weight: 700; font-size: 24px; }
+.btn-amber { background: var(--amber); color: var(--navy); }
+.btn-blue { background: var(--sapphire); color: var(--white); }
+
+/* Datenpunkt */
+.dot { position: absolute; width: 44px; height: 44px; border-radius: 50%; background: var(--sapphire-hi); box-shadow: 0 0 0 10px rgba(26, 106, 232, 0.18), 0 0 60px rgba(26, 106, 232, 0.8); }
+
+/* Untertitel */
+#captions { position: absolute; left: 0; right: 0; bottom: 70px; height: 150px; display: flex; align-items: center; justify-content: center; pointer-events: none; z-index: 50; }
+.cap-group { position: absolute; left: 160px; right: 160px; text-align: center; font-family: "Syne", sans-serif; font-weight: 800; font-size: 54px; letter-spacing: -1px; line-height: 1.15; opacity: 0; color: var(--navy); }
+.cap-group.dark { color: var(--white); }
+.cap-word { display: inline-block; margin: 0 0.12em; }
+.cap-word.key { color: var(--sapphire); }
+.cap-group.dark .cap-word.key { color: #7fb0ff; }
+
+/* Logo-Outro */
+.logo-wrap { position: relative; width: 340px; height: 304px; }
+.logo-part { position: absolute; inset: 0; background-size: contain; background-repeat: no-repeat; background-position: center; }
+.wordmark { font-family: "Syne", sans-serif; font-weight: 800; font-size: 72px; letter-spacing: 18px; color: var(--white); }
+.wordmark span { display: inline-block; }

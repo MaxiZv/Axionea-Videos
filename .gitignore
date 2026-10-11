@@ -5,5 +5,6 @@ renders/
 *.tmp
 
 # Interne Inhalte nicht ins öffentliche Repo (bis das Repo privat ist)
-videos/*/BRIEF.md
-videos/*/audio/
+videos/0*/
+videos/*/shared/
+videos/*/snapshots/
