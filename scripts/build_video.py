@@ -13,7 +13,7 @@ import json, pathlib, re, shutil, subprocess, sys
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 SFX = ROOT / "assets" / "sfx"
 MUSIC = ROOT / "assets" / "music" / "royalty-free-music.mp3"
-OUTRO_TAIL = 3.2  # Sekunden nach der letzten Silbe
+OUTRO_TAIL = 4.8  # Sekunden nach der letzten Silbe (Logo-Klang klingt vollständig aus)
 
 CONFIG = {
     "01-axionea-imagefilm": {
@@ -165,6 +165,16 @@ def main(v):
         g["dark"] = (g["para"] + 1) in cfg["dark_scenes"]
     (vdir / "timing.js").write_text("window.T = " + json.dumps(data, ensure_ascii=False) + ";\n")
 
+    # Gesamtdauer und letzte Szene in index.html an das Audio anpassen
+    html_p = vdir / "index.html"
+    if html_p.exists():
+        html = html_p.read_text()
+        html = re.sub(r'(data-composition-id="[^"]+" data-start="0" data-width="1920" data-height="1080" data-duration=")[0-9.]+', rf"\g<1>{total}", html)
+        html = re.sub(r'(<audio id="soundtrack" src="shared/soundtrack.wav" data-start="0" data-duration=")[0-9.]+', rf"\g<1>{total}", html)
+        last = data["scenes"][-1]
+        html = re.sub(rf'(<section id="s{last["n"]}" class="clip scene" data-start="[0-9.]+" data-duration=")[0-9.]+', rf"\g<1>{round(total - last['start'], 3)}", html)
+        html_p.write_text(html)
+
     # Soundtrack mischen
     music_start = starts[cfg["music_start_scene"] - 1]
     inputs = ["-i", str(vdir / "audio" / "voiceover.mp3"), "-i", str(MUSIC)]
@@ -182,7 +192,7 @@ def main(v):
                        f"adelay={ms}|{ms}[s{i}]")
         labels.append(f"[s{i}]")
     filters.append("".join(labels) + f"amix=inputs={len(labels)}:normalize=0:duration=longest,"
-                   f"atrim=0:{total},loudnorm=I=-12:TP=-1:LRA=11,aresample=48000[out]")
+                   f"atrim=0:{total},afade=t=out:st={total - 1.2}:d=1.2,loudnorm=I=-12:TP=-1:LRA=11,aresample=48000[out]")
     out = shared / "soundtrack.wav"
     run(["ffmpeg", "-hide_banner", "-y", *inputs, "-filter_complex", ";".join(filters), "-map", "[out]",
          "-ac", "2", "-ar", "48000", str(out)])
