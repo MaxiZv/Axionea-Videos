@@ -17,7 +17,7 @@ OUTRO_TAIL = 4.8  # Sekunden nach der letzten Silbe (Logo-Klang klingt vollstän
 
 CONFIG = {
     "01-axionea-imagefilm": {
-        "keys": ["sensiblen", "Daten", "Routine", "Stunden", "Wissen", "Axionea", "KI-Agentur",
+        "keys": ["sensiblen", "Daten", "Routine", "Stunden", "Wissen", "Axionea", "KI-Agentur", "beraten,", "bauen", "betreuen", "Beratung:", "Workshops", "IT,", "Betrieb.",
                  "Deutschland", "Cloud", "lokal", "eigenen", "Hardware", "Assistenten",
                  "Automatisierungen", "Wissensdatenbanken", "Software", "jede", "Branche",
                  "rechnet", "messen", "letzte", "Wort", "Sicherheit", "KI"],
@@ -31,11 +31,13 @@ CONFIG = {
             ("word", "Anfragen", -0.1, "ping", -17), ("word", "Dokumente", -0.1, "ping", -18),
             ("word", "Angebote", -0.1, "ping", -18), ("word", "wertvolles", 0.4, "whoosh", -18),
             ("scene", 3, 0.0, "swoosh-soft", -14), ("scene", 3, 1.6, "dock", -12),
+            ("word", "beraten,", -0.15, "pop", -17), ("word", "bauen", -0.15, "pop", -17), ("word", "betreuen", -0.15, "pop", -17),
             ("scene", 4, 0.0, "swoosh-soft", -14),
             ("word", "Cloud,", 0.2, "whoosh", -15), ("word", "Cloud,", 1.35, "dock", -13),
             ("word", "lokal,", -0.3, "dock", -15),
-            ("sent", 4, 2, 0.5, "tick", -13), ("sent", 4, 2, 0.9, "tick", -13),
-            ("sent", 4, 2, 1.3, "tick", -13), ("sent", 4, 2, 2.0, "hum", -15),
+            ("word", "empfehlen", 0.0, "tick", -13), ("word", "passende", 0.0, "tick", -13),
+            ("word", "richten", 0.0, "tick", -13), ("word", "schulen", 0.0, "tick", -13),
+            ("word", "Betrieb.", -0.3, "hum", -15),
             ("scene", 5, 0.0, "swoosh-soft", -14),
             ("sent", 5, 0, 1.6, "pop", -15), ("sent", 5, 0, 2.3, "typing", -21),
             ("sent", 5, 1, -0.1, "pop", -15), ("sent", 5, 2, -0.1, "pop", -15),
@@ -45,8 +47,8 @@ CONFIG = {
             ("word", "Steuerkanzlei,", -0.15, "pop", -16), ("word", "Patentanwalt,", -0.15, "pop", -16),
             ("word", "Ingenieurbüro", -0.15, "pop", -16), ("word", "Finanzmakler:", -0.15, "pop", -16),
             ("word", "jede", -0.3, "whoosh", -15),
-            ("scene", 7, 0.0, "swoosh-soft", -14), ("word", "starten", -0.1, "tick", -13),
-            ("word", "messen", -0.1, "tick", -13), ("word", "bleiben", -0.1, "tick", -13),
+            ("scene", 7, 0.0, "swoosh-soft", -14), ("word", "Beratung:", -0.1, "tick", -13),
+            ("word", "Workshops", -0.1, "tick", -13), ("word", "Start", -0.1, "tick", -13),
             ("word", "letzte", 0.0, "click", -10), ("word", "letzte", 0.12, "success", -13),
             ("scene", 8, -0.3, "riser", -17), ("scene", 8, 0.95, "dock", -9),
             ("scene", 8, 2.6, "chime", -12),
@@ -56,9 +58,9 @@ CONFIG = {
         "keys": ["Wissen", "Routine", "Posteingang", "Termine", "Mandantenanfragen", "Mandantendaten",
                  "Axionea", "Core.", "Fünf", "Bausteine", "System.", "Deutschland.", "DATEV",
                  "Automatisierungsplattform", "Wissensbasis", "KI-Modelle", "Verbrauch.",
-                 "Chatfenster", "Erstentwurf", "prüft", "frei.", "Check", "messen", "Sicherheitsanforderungen",
+                 "Chatfenster", "Erstentwurf", "prüft", "frei.", "Check", "messen", "Hardware", "IT,", "Betrieb", "Workshops", "lokal", "KI-Tools",
                  "Cloud.", "Kanzlei."],
-        "dark_scenes": [1, 7],
+        "dark_scenes": [1, 8],
         "music_start_scene": 2,
         "cues": [
             ("t", 0.0, "boom", -9), ("t", 0.3, "pulse", -11), ("word", "Aber", 0.2, "whoosh", -16),
@@ -72,10 +74,13 @@ CONFIG = {
             ("word", "Fünftens:", 0.05, "dock", -11),
             ("scene", 5, 0.0, "swoosh-soft", -14), ("word", "Erstentwurf,", -0.6, "typing", -21),
             ("word", "gibt", 0.0, "click", -10), ("word", "gibt", 0.12, "success", -13),
-            ("scene", 6, 0.0, "swoosh-soft", -14), ("word", "Check,", -0.1, "tick", -13),
-            ("word", "setzen", -0.1, "tick", -13), ("word", "messen", -0.1, "tick", -13),
-            ("word", "Kanzleien", -0.1, "whoosh", -16),
-            ("scene", 7, -0.8, "riser", -17), ("word", "Axionea.", 0.0, "dock", -9),
+            ("scene", 6, 0.0, "swoosh-soft", -14), ("word", "empfehlen", 0.0, "tick", -13),
+            ("word", "passende", 0.0, "tick", -13), ("word", "richten", 0.0, "tick", -13),
+            ("word", "richten", 0.3, "hum", -16), ("word", "schulen", -0.1, "pop", -15),
+            ("word", "übernehmen", -0.1, "pop", -15),
+            ("scene", 7, 0.0, "swoosh-soft", -14), ("word", "Check,", -0.1, "tick", -13),
+            ("word", "Workshops", -0.1, "tick", -13), ("word", "messen", -0.1, "tick", -13),
+            ("scene", 8, -0.8, "riser", -17), ("word", "Axionea.", 0.0, "dock", -9),
             ("word", "Axionea.", 1.6, "chime", -12),
         ],
     },
@@ -171,8 +176,10 @@ def main(v):
         html = html_p.read_text()
         html = re.sub(r'(data-composition-id="[^"]+" data-start="0" data-width="1920" data-height="1080" data-duration=")[0-9.]+', rf"\g<1>{total}", html)
         html = re.sub(r'(<audio id="soundtrack" src="shared/soundtrack.wav" data-start="0" data-duration=")[0-9.]+', rf"\g<1>{total}", html)
-        last = data["scenes"][-1]
-        html = re.sub(rf'(<section id="s{last["n"]}" class="clip scene" data-start="[0-9.]+" data-duration=")[0-9.]+', rf"\g<1>{round(total - last['start'], 3)}", html)
+        for s in data["scenes"]:
+            dur = round(s["end"] - s["start"] + (0 if s["n"] == len(data["scenes"]) else 0.6), 3)
+            html = re.sub(rf'<section id="s{s["n"]}" class="clip scene" data-start="[0-9.]+" data-duration="[0-9.]+"',
+                          f'<section id="s{s["n"]}" class="clip scene" data-start="{s["start"]}" data-duration="{dur}"', html)
         html_p.write_text(html)
 
     # Soundtrack mischen
